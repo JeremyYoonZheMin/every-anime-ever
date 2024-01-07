@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Anime Thing</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/anime.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+  </head>
+  <body id="body" class="anime" onload="loadAnime()">
+    <!-- *PAGE CONTENT! -->
+    <div id="main" class="main-container" style="max-width: 1600px;">
+        <div class="back-arrow" onclick="goToHome()">&#129128;</div>
+        <div id="video-container" class="video-container">
+          <iframe id='video-player' class='video-player' frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+        <div class="anime-info">
+            <div id="text-info" class="text-info">
+              <h1 id='details-header' class='text-info-header'>Details</h1>
+              <div class="details-container">
+                <div class="no-break"><p class="details-title">Title: </p><p id="details-title" class="details-text"></p></div>
+                <div class="no-break"><p class="details-title">Type: </p><p id="details-type" class="details-text"></p></div>
+                <div class="no-break"><p class="details-title">Episodes: </p><p id="details-episodes" class="details-text"></p></div>
+                <div class="no-break"><p class="details-title">Status: </p><p id="details-status" class="details-text"></p></div>
+                <div class="no-break"><p class="details-title">Duration: </p><p id="details-duration" class="details-text"></p></div>
+                <div class="no-break"><p class="details-title">Rating: </p><p id="details-rating" class="details-text"></p></div>
+                <div class="no-break"><p class="details-title">Year: </p><p id="details-year" class="details-text"></p></div>
+                <div class="no-break"><p class="details-title">Score: </p><p id="details-score" class="details-text"></p></div>
+              </div>
+              <div id="details-synopsis">
+                <h1 id='synopsis-header' class='text-info-header'>Synopsis</h1>
+                <p id="synopsis-text" class="details-text"></p>
+              </div>
+              <div id="details-background">
+                <h1 id="background-header" class="text-info-header">Background</h1>
+                <p id="background-text" class="details-text"></p>
+              </div>
+            </div>
+            <div id="episode-list" class="episodes">
+              <h2 class="episodes-header">Episodes:</h2>
+            </div>
+        </div>
+    </div>
+
+  </body>
+  <script src="../js/anime.js"></script>
+</html>

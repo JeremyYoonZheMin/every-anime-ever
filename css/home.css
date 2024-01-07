@@ -1,0 +1,179 @@
+@import "app.css";
+
+h5 {
+  font-family: "Raleway", sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding-top: 10px;
+    background-color: rgb(12, 12, 12)
+}
+.header-text {
+    background-clip: text;
+    background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+    color: #000119;
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: calc(1em / 8);
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em / 16);
+    margin: 15px;
+}
+.header-text:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(12, 12, 12);
+    /* background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%); */
+}
+.search-bar {
+	border: none;
+	width: 50em;
+    height: 2.3em;
+	border-radius: 100px;
+	background: #ffffff;
+	color: #000000;
+    padding-left: 15px;
+}
+
+.home {
+    background-color: rgb(12, 12, 12);
+    color: #fff !important;
+}
+.main-container {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.anime-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.anime-card {
+    width: 230px;
+    margin: 10px;
+}
+.anime-card img {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}
+.anime-card-title {
+    text-align: center;
+    margin-top: 5px;
+}
+.anime-preview {
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgb(40, 40, 40);
+    width: 350px;
+    height: 500px;
+    overflow: scroll;
+}
+.preview-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: inherit;
+    height: 100%;
+    /* text-shadow: 3px 4px 7px rgba(100, 100, 100, 0.8); */
+}
+.anime-preview iframe {
+    width: 350px;
+    height: 200px;
+    border-color: transparent;
+    padding: 0px;
+}
+fade {
+    position: absolute;
+    bottom: 0px;
+
+    display: block;
+  
+    width: 100%;
+    height: 50px;
+  
+    background-image: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 0), 
+        rgba(0, 0, 0, 0.9)
+    100%);
+}
+.glowing-border {
+    box-shadow: 0 0 20px 3px #a3a3a3;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+.nav-button {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  width: 10em;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.nav-button:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #EBEBEB;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.nav-button:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.nav-button:after {
+  background-color: #FFFFFF;
+}
+
+.nav-button span {
+  /* z-index: 1; */
+  position: relative;
+}
