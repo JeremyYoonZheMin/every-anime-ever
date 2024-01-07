@@ -73,6 +73,10 @@ h5 {
     text-align: center;
     margin-top: 5px;
 }
+.anime-card-hover {
+    box-shadow: 0 0 20px 3px #a3a3a3;
+    transform: scale(1.02)
+}
 .anime-preview {
     position: absolute;
     border-radius: 10px;
@@ -107,9 +111,6 @@ fade {
         rgba(255, 255, 255, 0), 
         rgba(0, 0, 0, 0.9)
     100%);
-}
-.glowing-border {
-    box-shadow: 0 0 20px 3px #a3a3a3;
 }
 
 .nav-buttons {
@@ -176,4 +177,7 @@ fade {
 .nav-button span {
   /* z-index: 1; */
   position: relative;
+}
+.nav-button-hidden {
+    display: none;
 }

@@ -46,8 +46,8 @@ function displayAnimeCards() {
     }
     let previousButton = document.getElementById("previous-button")
     let nextButton = document.getElementById("next-button")
-    previousButton.style.display = currentPage > 0 ? "inline-block" : "none"
-    nextButton.style.visibility = currentPage < pages.length - 1 ? "inline-block" : "none"
+    currentPage > 0 ? previousButton.classList.remove('nav-button-hidden') : previousButton.classList.add('nav-button-hidden')
+    currentPage < pages.length - 1 ? nextButton.classList.remove('nav-button-hidden') : nextButton.classList.add('nav-button-hidden')
 }
 
 function showPreview(event) {
@@ -70,8 +70,7 @@ function showPreview(event) {
     newPreview.addEventListener('mouseleave', closePreview)
     if (!document.getElementById(newPreview.id)) {
         main.appendChild(newPreview)
-        event.target.style.transform = 'scale(1.02)'
-        event.target.classList.add('glowing-border')
+        event.target.classList.add('anime-card-hover')
     }
 }
 
@@ -81,8 +80,7 @@ function closePreview(event) {
     let animeCard = document.getElementById(`card-${animeIndex}`)
     if (!(preview.matches(':hover') || animeCard.matches(':hover'))) {
         main.removeChild(preview)
-        animeCard.style.transform = 'scale(1)'
-        animeCard.classList.remove('glowing-border')
+        animeCard.classList.remove('anime-card-hover')
     }
 }
 
